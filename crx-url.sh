@@ -45,7 +45,7 @@ url()
 	(https://chrome.google.com/webstore/detail/*/*)		show "$1" "$2";;
 	esac
 
-	printf 'Sorry, URL %q not understood\nvalid URLs look like this\n%q\n' "$EXAMPLE" >&2
+	printf 'Sorry, URL %q not understood\nvalid URLs look like this\n%q\n' "$2" "$EXAMPLE" >&2
 	exit 23
 }
 
