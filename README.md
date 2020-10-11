@@ -8,8 +8,9 @@ This is a simple and scriptable way to get a download URL of Google Chrome CRX f
 
 Based on https://stackoverflow.com/a/14099762
 
-> **Warning!** There are several websites which allow to download things.
-- Never trust external sites, they might do very nasty things to your computer.
+> **Warning!** There are several websites which allow to download things.  
+> Never trust external sites, they might do very nasty things to your computer.  
+> Never trust downloads from foreign sites.  Always check the source, Luke!
 
 
 # Usage
@@ -62,7 +63,6 @@ Check CRX?
   - https://groups.google.com/a/chromium.org/forum/#!topic/chromium-extensions/XvddmJZvGIY
   - https://web.archive.org/web/20180114090616/https://developer.chrome.com/extensions/crx
   - https://github.com/pawliczka/CRX3-Creator
-- Note:  Never trust downloads from foreign sites.  Always check the source, Luke!
 
 Windows?
 
