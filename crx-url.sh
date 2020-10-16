@@ -38,14 +38,16 @@ show()
 : url VER URL
 url()
 {
-	case "$2" in
+	local url="${2%%\#*}"
+	url="${url%%\?*}"
+	case "$url" in
 	(https://chrome.google.com/webstore/detail/*/*/*/*)	;;
-	(https://chrome.google.com/webstore/detail/*/*/related)	show "$1" "${2%/related}";;
+	(https://chrome.google.com/webstore/detail/*/*/related)	show "$1" "${url%/related}";;
 	(https://chrome.google.com/webstore/detail/*/*/*)	;;
-	(https://chrome.google.com/webstore/detail/*/*)		show "$1" "$2";;
+	(https://chrome.google.com/webstore/detail/*/*)		show "$1" "$url";;
 	esac
 
-	printf 'Sorry, URL %q not understood\nvalid URLs look like this\n%q\n' "$2" "$EXAMPLE" >&2
+	printf 'Sorry, URL %q not understood\nvalid URLs look like this\n%q\n' "$url" "$EXAMPLE" >&2
 	exit 23
 }
 
