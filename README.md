@@ -57,6 +57,10 @@ Unpack CRX?
 
 Check CRX?
 
+- https://github.com/hilbix/llzipdump is a low level tool to dump the ZIP file structure
+  - Created by me to analyze CRX files
+  - It might be helpful for other ZIPs, too
+  - It might contain bugs
 - Perhaps see
   - https://github.com/vladignatyev/crx-extractor
   - https://stackoverflow.com/a/59009114
@@ -68,3 +72,7 @@ Windows?
 
 - [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux)!
 
+Firefox?
+
+- Right click on the install button and select "Save Link As..."
+- Read:  Mozilla does it right as this is as simple as it can get!
