@@ -5,8 +5,9 @@
 # This script is free as in free beer, free speech and free baby.
 # This script is a far too complex solution to such a simple problem (which isn't my fault)!
 
-VER=86.0.4240.75
-EXAMPLE="https://chrome.google.com/webstore/detail/*/*"
+VER=138.0.7204.49
+
+EXAMPLE="https://chromewebstore.google.com/detail/*/*"
 
 : getver
 getver()
@@ -30,7 +31,7 @@ show()
 	name="${2%/*}"
 	name="${name##*/}"
 
-	printf -v esc ' %q' -O "$name.$ext.crx" "https://clients2.google.com/service/update2/crx?response=redirect&&acceptformat=crx2,crx3&x=id%3D$ext%26uc&prodversion=$ver"
+	printf -v esc ' %q' -O "$name.$ext.crx" "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D$ext%26uc&prodversion=$ver"
 	printf 'wget%s\n' "$esc"
 	exit 0
 }
@@ -45,6 +46,8 @@ url()
 	(https://chrome.google.com/webstore/detail/*/*/related)	show "$1" "${url%/related}";;
 	(https://chrome.google.com/webstore/detail/*/*/*)	;;
 	(https://chrome.google.com/webstore/detail/*/*)		show "$1" "$url";;
+	(https://chromewebstore.google.com/detail/*/*/*)	;;
+	(https://chromewebstore.google.com/detail/*/*)		show "$1" "$url";;
 	esac
 
 	printf 'Sorry, URL %q not understood\nvalid URLs look like this\n%q\n' "$url" "$EXAMPLE" >&2
